@@ -1,27 +1,33 @@
 <script lang="ts">
-	import type { IDiler } from '$lib/database/cars';
+	import type { Diler } from '$lib/database/cars';
 
-	export let diler: IDiler;
+	export let diler: Diler;
 </script>
 
-<div class="car-card">
+<a href="{diler.url}">
+<div class="car-card " style="background-image:url({diler.photo});">
 	<div class="shadow">
-		<div class="city"></div>
+		<div class="city">{diler.name}</div>
 	</div>
 </div>
+</a>
 
 <style>
 	.car-card {
-		height: 256px;
+		height: 260px;
 		width: 460px;
-		background: url('/images/diler.png');
-		background-size: cover;
 		display: flex;
 		align-items: flex-end;
 		border-radius: 30px;
+		background-size: contain ;
+		background-repeat:round;
+		
+		
 	}
 	.city {
 		margin-left: 20px;
+		margin-top: 2px;
+
 	}
 	.shadow {
 		background: rgba(61, 60, 60, 1);

@@ -11,5 +11,6 @@
         background-color: white;
         background-size: cover;
         height: 65px;
+
     }
 </style>

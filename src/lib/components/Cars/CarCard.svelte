@@ -1,16 +1,22 @@
+<script lang="ts">
+    import type {Cars} from '$lib/database/cars';
+    export let car:Cars;
+</script>
 <div class="containers">
-<div class="car-card">
-    <img src="/images/cars.png" alt="">
+<div>
+    <img  class="car-card" src="{car.photo}" alt="">
 </div>
-<div class="mx-3 mt-3">LADA PRIORA, 2014</div>
-<div class="mx-3 mt-2">2000000 рублей</div>
-<div class="mx-2 mt-1"><img class="map" src="/icon/map.png" alt="">Сургут</div>
+<div class="mx-4 mt-3 font-semibold">{car.name}</div>
+<div class="mx-4 mt-1">{car.price}</div>
+<div class="mx-3 mt-1"><img class="map" src="/icon/map.png" alt="">Сургут</div>
 </div>
 <style>
     .car-card{
-        height: 210px;
-        width: 330px;
+        height: 220px;
+        width: 300px;
         background-size: cover;
+        border-top-left-radius: 30px;
+		border-top-right-radius:30px
     }
     .containers{
         height: 330px;
